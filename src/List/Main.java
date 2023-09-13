@@ -1,12 +1,17 @@
 package List;
 
+import java.util.Scanner;
+
 public class Main {
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		DrderedDynamicList teste = new DrderedDynamicList(); 
-		teste.add("3");
-		teste.add("1");
-		teste.add("5");
-		teste.add("4");
+		
+		int n = sc.nextInt();
+		
+		for (int i = 0; i < n; i++) {
+			teste.add(sc.nextInt());
+		}
 		System.out.println(teste);
 	}
 }

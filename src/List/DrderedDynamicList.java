@@ -18,14 +18,14 @@ public class DrderedDynamicList<T extends Comparable<T>> {
 		} else if (novo.dado.compareTo(primeiro.dado) < 0) {
 			novo.proximo = primeiro;
             primeiro = novo;
-		} else if (novo.dado.compareTo(ultimo.dado) > 0) {
+		} else if (novo.dado.compareTo(ultimo.dado) >= 0) {
 			ultimo.proximo = novo;
 			ultimo = novo;
 		} else {
 			No<T> aux = primeiro; 
 			No<T> antes = null;
 			while(aux != null) {
-				if(aux.dado.compareTo(novo.dado) < 0) {
+				if(aux.dado.compareTo(novo.dado) <= 0) {
 					antes = aux;
 				}
 				aux = aux.proximo;
